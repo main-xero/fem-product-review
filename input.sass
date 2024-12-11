@@ -1,0 +1,123 @@
+$font-stack: Montserrat, sans-serif
+$font-heading: Fraunces, serif
+$primary-color: hsl(212, 21%, 14%)
+$dark-cyan: hsl(158, 36%, 37%)
+$hover: hsl(158, 42%, 18%)
+$background: hsl(30, 38%, 92%)
+$white: hsl(0, 0%, 100%)
+$alt: hsl(228, 12%, 48%)
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    line-height: 1
+
+body
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 100vh
+    font: 100% $font-stack
+    color: $primary-color
+    background-color: $background
+    transition: .5s
+
+main
+    display: flex
+    flex-direction: row
+    width: 600px
+    height: 400px
+    background-color: $white
+    border-radius: .5rem
+    overflow: hidden
+
+    .image
+        background-image: url(./images/image-product-desktop.jpg)
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center
+        width: 300px
+        height: auto
+
+    .info
+        width: 300px
+
+    p, h1, .original
+        color: $alt
+
+    h2, .reduced
+        color: $dark-cyan
+
+    button
+        background-color: $dark-cyan
+        color: $white
+
+    .info
+        padding: 2rem
+
+    h1
+        font-size: 14px
+        font-weight: 500
+        letter-spacing: .4rem
+    
+    h2
+        font-family: $font-heading
+        font-size: 32px
+        color: $primary-color
+        padding: 1rem 0
+    
+    p
+        font-size: 14px
+        line-height: 1.5
+        padding-bottom: 1rem
+
+    .price
+        padding-bottom: 1rem
+
+    .reduced
+        font-size: 32px
+        font-family: $font-heading
+        font-weight: bold
+
+    .original
+        font-size: 13px
+        font-weight: medium
+
+    button
+        display: flex
+        justify-content: center
+        gap: 1rem
+        font-size: 14px
+        border: none
+        width: 100%
+        padding: 1rem 0
+        border-radius: 0.5rem
+        cursor: pointer
+
+    button:hover
+        background-color: $hover
+
+@media only screen and (max-width: 650px) 
+    body 
+        background-color: $dark-cyan
+
+    main
+        display: flex
+        flex-wrap: wrap
+        width: 343px
+        height: 611px
+
+        .image
+            background-image: url(./images/image-product-mobile.jpg)
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center
+            width: 343px
+            height: 240px
+
+        h1
+            font-size: 12px
+
+        .info
+            width: 100%
